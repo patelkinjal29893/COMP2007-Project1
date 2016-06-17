@@ -6,8 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 /**
- * @author: Tom Tsiliopoulos
- * @date: May 26, 2016
+ * @author: Kinjal patel
+ * @date: June 13, 2016
  * @version: 0.0.1 - added SetActivePage method
  */
 
@@ -15,6 +15,8 @@ namespace COMP2007_Project1
 {
     public partial class Navbar : System.Web.UI.UserControl
     {
+        private object games;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             SetActivePage();
@@ -35,15 +37,9 @@ namespace COMP2007_Project1
                 case "Home Page":
                     home.Attributes.Add("class", "active");
                     break;
-                case "Students":
-                    students.Attributes.Add("class", "active");
-                    break;
-                case "Courses":
-                    courses.Attributes.Add("class", "active");
-                    break;
-                case "Departments":
-                    departments.Attributes.Add("class", "active");
-                    break;
+                case "game":
+                    game.Attributes.Add("class", "active");
+                    break;               
                 case "Contact":
                     contact.Attributes.Add("class", "active");
                     break;
